@@ -4,7 +4,9 @@ import { SearchComponent } from '../search/search.component';
 import { Pipe,PipeTransform } from '@angular/core';
 import { CardFilterPipe } from "../pipes/card-filter.pipe";
 import { LabelType, Options } from '@angular-slider/ngx-slider';
-
+import { MastercardsComponent } from "../mastercards/mastercards.component";
+import { tarjetas } from '../data/datos';
+import { Cards } from '../model/cards';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +24,8 @@ export class HomeComponent implements OnInit {
   active: boolean;
   active1: boolean;
 
+  lista:Cards[]=[];
+  listaTarjetas:Cards[]=[];
 
   panelOpenState = false;
   myFilter = (d: Date | null): boolean => {
@@ -29,7 +33,6 @@ export class HomeComponent implements OnInit {
     // Prevent Saturday and Sunday from being selected.
     return day !== 0 && day !== 6;
   }
-
 
 /////// Adultos
   clickCount(): void {
@@ -81,6 +84,10 @@ clickCount3(): void {
     datePickerConfig:Partial<BsDatepickerConfig>;
 
     constructor()  {
+
+      // this.lista=tarjetas
+      // this.listaTarjetas=tarjetas
+     
       this.datePickerConfig = Object.assign({},
         {
           containerClass: 'theme-dark-blue',
@@ -91,12 +98,25 @@ clickCount3(): void {
         });
     }
 
+    minValue: number = 100000;
+    maxValue: number = 180000;
     options: Options = {
       floor: 80000,
-      ceil: 400000
+      ceil: 250000
     };
 
-  ngOnInit() {}
+  ngOnInit() { 
+
+    // this.listaTarjetas = this.lista.filter(t=>{t.precios >= this.minValue && t.precios <= this.maxValue  
+    //                                             })
+
+    // console.log(this.lista)
+
+
+  }
+
+  
+
 
      }
 

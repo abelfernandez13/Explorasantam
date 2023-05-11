@@ -432,9 +432,12 @@ h5 {
         padding-left: 83px;
     }
     figcaption.trasera {
-        width: 300px;
+        width: 270px;
         height: 203px;
-        border-radius: 3%;
+        border-top-left-radius: calc(16.25px - 1px);
+        border-top-right-radius: calc(16.25px - 1px);
+        border-bottom-left-radius: calc(16.25px - 1px);
+        border-bottom-right-radius: calc(16.25px - 1px);
         position: absolute;
         top: 0;
         padding: 20px;
@@ -501,8 +504,10 @@ a {
 .contenedor_targeta {
     overflow: hidden;
     width: 100%;
-    max-width: 96%;
+    max-width: 94%;
+    height: 250px;
     margin-top: 24px;
+    padding-left: 0px;
     display: flex;
     justify-content: end;
 }
@@ -568,7 +573,7 @@ a {
 }
 
 figure {
-    width: 300px;
+    width: 270px;
     height: 203px;
     margin: 0;
     position: relative;
@@ -579,9 +584,12 @@ figure {
 
 figure.frontal,
 figure.trasera {
-    width: 300px;
+    width: 270px;
     height: 203px;
-    border-radius: 5px;
+    border-top-left-radius: calc(16.25px - 1px);
+    border-top-right-radius: calc(16.25px - 1px);
+    border-bottom-left-radius: calc(16.25px - 1px);
+    border-bottom-right-radius: calc(16.25px - 1px);
     transition: all ease .5s;
 }
 
@@ -1019,7 +1027,7 @@ figcaption.trasera.titulo {
 
 .frontal {
     width: 270px;
-    height: 203px;
+    height: 240px;
     border-top-left-radius: calc(16.25px - 1px);
     border-top-right-radius: calc(16.25px - 1px);
     border-bottom-left-radius: calc(16.25px - 1px);

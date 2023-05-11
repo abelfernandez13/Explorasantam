@@ -48,11 +48,6 @@ import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker
 import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
-
-
-
-
-
 @NgModule({
   declarations: [
 
