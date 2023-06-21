@@ -12,7 +12,10 @@ import { Component, OnInit } from '@angular/core';
   ><ng-template swiperSlide><img class="imagen" src="./assets/img/Cabaña-Ayapel/escalera-cabaña-ayapel.jpg" alt=""></ng-template
   ><ng-template swiperSlide><img class="imagen" src="./assets/img/Cabaña-Ayapel/escalera1-cabaña-ayapel.jpg" alt=""></ng-template
   ><ng-template swiperSlide><img class="imagen" src="./assets/img/Cabaña-Ayapel/comedor-cabaña-ayapel.jpg" alt=""></ng-template>
-</swiper>`,
+  ><ng-template swiperSlide><img class="imagen" src="./assets/img/Cabaña-Ayapel/sala-cabaña.jpeg" alt=""></ng-template>
+
+
+  </swiper>`,
   styleUrls: ['./swipper-cayapel.component.scss']
 })
 export class SwipperCayapelComponent implements OnInit {

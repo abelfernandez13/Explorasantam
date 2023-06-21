@@ -8,6 +8,10 @@
     display: inline-block;
     margin-bottom: 20px;
     overflow: hidden;
+    width: 83%;
+    margin-left: 49px;
+    border-radius: 13px;
+    height: 512px;
 }
 
 .ngx-gallery-thumbnails-wrapper {
@@ -90,7 +94,7 @@
 
 .title {
     align-items: center;
-    font-family: "Galada", cursive;
+    // font-family: "Galada", cursive;
     margin-top: 17px;
     width: 96%;
     margin-left: auto;

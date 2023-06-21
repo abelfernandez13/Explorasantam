@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Options, LabelType } from '@angular-slider/ngx-slider';
-import { Lugares } from '../model/Lugares';
-import { Cards } from '../model/cards';
-import { tarjetas } from '../data/datos';
-import { CardService } from '../shared/services/card.service';
-import { lugar } from '../data/lugares';
+import { Cards } from 'src/app/model/cards';
+import { Lugares } from 'src/app/model/Lugares';
+import { CardService } from 'src/app/shared/services/card.service';
+import { tarjetas } from 'src/app/data/datos';
+import { lugar } from 'src/app/data/lugares';
+
+
 @Component({
-  selector: 'app-cardcontac',
-  templateUrl: './cardcontac.component.html',
-  styleUrls: ['./cardcontac.component.scss']
+  selector: 'app-cards',
+  templateUrl: './cards.component.html',
+  styleUrls: ['./cards.component.scss']
 })
-export class CardcontacComponent implements OnInit {
+export class CardsComponent implements OnInit {
 
   bsValue = new Date();
   fechaInitiale: Date[];

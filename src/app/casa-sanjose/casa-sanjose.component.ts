@@ -12,9 +12,11 @@ import {NgxGalleryThumbnailsComponent} from '@kolkov/ngx-gallery';
 export class CasaSanjoseComponent implements OnInit {
 
 
+
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
   galleryThumbnailsComponent: NgxGalleryThumbnailsComponent[];
+
 
   constructor() { }
 

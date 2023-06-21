@@ -28,6 +28,14 @@ component: HomeComponent
   component: CasafarolesComponent
 },
 {
+  path: 'casaB-201',
+  component: AptoVillamonicaComponent
+},
+{
+  path: 'casaB-202',
+  component: CasablancaComponent
+},
+{
   path: 'apto-villamonica',
   component: AptoVillamonicaComponent
 

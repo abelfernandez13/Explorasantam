@@ -6,6 +6,9 @@ import { CardFilterPipe } from "../pipes/card-filter.pipe";
 import { tarjetas } from '../data/datos';
 import { HomeComponent } from "../home/home.component";
 import { Options } from '@angular-slider/ngx-slider';
+import { CardService } from '../shared/services/card.service';
+
+
 
 @Component({
   selector: 'app-mastercards',
@@ -14,35 +17,37 @@ import { Options } from '@angular-slider/ngx-slider';
 })
 export class MastercardsComponent implements OnInit {
 
-  minValue: number = 100000;
-  maxValue: number = 200000;
+   minValue: number = 100000;
+   maxValue: number = 200000;
   options: Options = {
     floor: 80000,
     ceil: 250000
-  };
+  }; 
 
-  searchTerm:string='';
+  // searchTerm:string='';
 
-  lista:Cards[]=[];
-  listaTarjetas:Cards[]=[];
+   lista:Cards[]=[];
+   listaTarjetas:Cards[]=[];
 
 constructor() {
   this.lista=tarjetas
+  
   this.listaTarjetas=tarjetas
+
+
   
  }
 
  ngOnInit():void {
  
-   this.listaTarjetas = this.lista.filter(t=>t.precios >= this.minValue && t.precios <= this.maxValue)
-   console.log(this.listaTarjetas)
+  //  this.listaTarjetas = this.lista.filter(t=>t.precios >= this.minValue && t.precios <= this.maxValue)
+  //  console.log(this.listaTarjetas)
 
  
     }
-    verIdpar():void{
-      this.listaTarjetas = this.lista.filter(t=>t.precios >= this.minValue && t.precios <= this.maxValue)
-
-          // this.lista=tarjetas.filter(x=>x.name.toLowerCase().includes(this.searchTerm.toLowerCase()));
-        }
-      
-       }
+    // verIdpar():void{
+    //   this.listaTarjetas = this.lista.filter(t=>{t.precios >= this.minValue && t.precios <= this.maxValue
+    //                                          && t.adultos 
+    //     })
+    //      }
+          }

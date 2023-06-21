@@ -8,6 +8,11 @@
     display: inline-block;
     margin-bottom: 20px;
     overflow: hidden;
+    border-radius: 17px;
+    width: 83%;
+    margin-left: 49px;
+    border-radius: 13px;
+    height: 512px;
 }
 
 .ngx-gallery-thumbnails-wrapper {
@@ -27,6 +32,15 @@
     transition: transform .5s ease-in-out;
     will-change: transform;
     margin-top: 7px;
+}
+
+.swiper-container1 {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-container {
+    display: none;
 }
 
 .ngx-gallery-animation-slide.ngx-gallery-image.ngx-gallery-active {
@@ -237,7 +251,7 @@ p {
     width: 100%;
 }
 
-@media(min-width: 320px) and (max-width: 996px) {
+@media(min-width: 160px) and (max-width: 996px) {
     .service {
         flex-direction: column;
         box-sizing: border-box;
@@ -255,7 +269,7 @@ p {
         height: 40px;
     }
     .ngx-gallery {
-        display: none;
+        display:none ;
     }
     .swiper-container {
         width: 100%;
@@ -289,7 +303,7 @@ p {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1104px;
         margin-right: initial;
     }
 }

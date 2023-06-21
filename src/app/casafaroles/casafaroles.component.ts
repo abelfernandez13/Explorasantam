@@ -3,7 +3,6 @@ import {NgxGalleryOptions} from '@kolkov/ngx-gallery';
 import {NgxGalleryImage} from '@kolkov/ngx-gallery';
 import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 import {NgxGalleryThumbnailsComponent} from '@kolkov/ngx-gallery';
-
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @Component({
@@ -29,7 +28,7 @@ export class CasafarolesComponent implements OnInit {
          console.log(this.datosTrans)
      })
   }
-
+//3054274057  buscar ->
    ngOnInit() {
 
     this.galleryOptions = [

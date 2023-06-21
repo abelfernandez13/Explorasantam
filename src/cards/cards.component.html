@@ -3,20 +3,15 @@
     <!-- <div *ngIf="showPlaceholder" class="placeholder" style="font-size:large ;font-size: 19px;">$80000 COP noche </div> -->
 
     <mat-card class="card2 col-md-4">
-        <div>
-            <h5>Cual es tu presupuesto</h5>
-            <ngx-slider style="margin-top: 18%" [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
-        </div>
-
-        <div>
+          <div>
             <h2 class="titulo">FECHAS</h2>
             <span style="font-size: 13px;
-            font-weight: inherit;
-            color: gray;
-            margin-left: 81px;
-            position: unset;
-            margin-top: 12px;
-            margin-right: 28px;">LLegada | Salida </span>
+                font-weight: inherit;
+                color: gray;
+
+                margin-left:70px;
+    margin-top: 12px;
+    margin-right: 28px;">LLegada | Salida </span>
         </div>
         <div class="row">
             <!-- <div class="col-xs-12 col-12 col-md-4 form-group">
@@ -88,20 +83,39 @@
     <mat-card class="card5 col-md-4 ">
         <div type="button" style="padding: 20px;
         font-size: 13px;">${{precios}} X {{fechaDif}} noches = ${{ resolv }} COP </div>
-        
-        <div (click)="verIdpar()" type="pointer" class="card-search col-md-1" ml-3 style="width: 55%;
-        height: 30px;
-        margin-left: 58px;
-        cursor: pointer;
-        border-radius: 13px;
-        background-color: aqua;
-        font-size: 12px;">
-            <span style="margin-top: 7px;" class="fa fa-search"></span>
-            <span style="top: 4px;
-            margin-left: 16px;
-            position: absolute;
-            font-size: 15px;">Search</span>
+          <div d class="button1 col-md-2">
+
+         <button class="button2" mat-raised-button style="background-color: aqua;">
+            <form action="https://checkout.wompi.co/p/" method="GET">
+           
+              <input type="hidden" name="public-key" value="pub_test_YDxWl69pVUzZK3vNdJMCVphSP3L7ZCnE" />
+              <input type="hidden" name="currency" value="cop" />
+              <input type="hidden" name="amount-in-cents" id="monto" />
+              <input type="hidden" name="reference" value="3b4393baf56_65ed398ba2" />
+     
+              <input type="hidden" placeholder="habitacion" id="habitaciones"/>
+              <input type="hidden"  placeholder="camas"  id="camas"  />
+
+              <input type="hidden" name="signature:integrity" value="FIRMA_DE_INTEGRIDAD"/>
+              <input type="hidden" name="redirect-url" value="URL_REDIRECCION" />
+              <input type="hidden" name="tax-in-cents:vat" value="IVA_EN_CENTAVOS" />
+              <input type="hidden" name="tax-in-cents:consumption" value="IMPOCONSUMO_EN_CENTAVOS" />
+              <input type="hidden" name="customer-data:email" value="CORREO_DEL_PAGADOR" />
+              <input type="hidden" name="customer-data:full-name" value="NOMBRE_DEL_PAGADOR" />
+              <input type="hidden" name="customer-data:phone-number" value="NUMERO_DE_TELEFONO_DEL_PAGADOR" />
+              <input type="hidden" name="customer-data:legal-id" value="DOCUMENTO_DE_IDENTIDAD_DEL_PAGADOR" />
+              <input type="hidden" name="customer-data:legal-id-type" value="TIPO_DEL_DOCUMENTO_DE_IDENTIDAD_DEL_PAGADOR" />
+              <input type="hidden" name="shipping-address:address-line-1" value="DIRECCION_DE_ENVIO" />
+              <input type="hidden" name="shipping-address:country" value="PAIS_DE_ENVIO" />
+              <input type="hidden" name="shipping-address:phone-number" value="NUMERO_DE_TELEFONO_DE_QUIEN_RECIBE" />
+              <input type="hidden" name="shipping-address:city" value="CIUDAD_DE_ENVIO" />
+              <input type="hidden" name="shipping-address:region" value="REGION_DE_ENVIO" />
+
+              <button type="submit" value="submit" onclick="OnChangeValue()">Reservar</button>
+            </form>
+       
+            </button> 
         </div>
-    </mat-card>
+       </mat-card>
 </mat-card>
 

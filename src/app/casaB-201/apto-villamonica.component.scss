@@ -8,6 +8,10 @@
     display: inline-block;
     margin-bottom: 20px;
     overflow: hidden;
+    width: 83%;
+    margin-left: 49px;
+    border-radius: 13px;
+    height: 512px;
 }
 
 .ngx-gallery-thumbnails-wrapper {
@@ -121,11 +125,10 @@
 }
 
 .hr {
-    margin-top: 32px;
-    width: 511px;
+    margin-top: 16px;
+    width: 256px;
     margin-bottom: 1rem;
-    /* padding-left: 8px; */
-    margin-right: 489px;
+    margin-right: 51px;
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, .1);
 }
@@ -164,6 +167,7 @@
 
 .span {
     font-size: smaller;
+    margin-left: 11px;
 }
 
 .logos {

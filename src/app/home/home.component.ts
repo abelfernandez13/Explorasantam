@@ -7,6 +7,11 @@ import { LabelType, Options } from '@angular-slider/ngx-slider';
 import { MastercardsComponent } from "../mastercards/mastercards.component";
 import { tarjetas } from '../data/datos';
 import { Cards } from '../model/cards';
+import { CardService } from '../shared/services/card.service';
+import { lugar } from '../data/lugares';
+import { Lugares } from '../model/Lugares';
+import { CardcontacComponent } from "../cardcontac/cardcontac.component";
+
 
 @Component({
   selector: 'app-home',
@@ -21,11 +26,14 @@ export class HomeComponent implements OnInit {
   count3: number = 0; // Niños
   count4: number = 0;
   count5: number = 0;
+  count6:number;
+  count7:number;
   active: boolean;
   active1: boolean;
 
   lista:Cards[]=[];
   listaTarjetas:Cards[]=[];
+  lugares:Lugares[]=[];
 
   panelOpenState = false;
   myFilter = (d: Date | null): boolean => {
@@ -43,6 +51,8 @@ export class HomeComponent implements OnInit {
       }else{
       this.active = false;
       }
+
+      this.count2= this.count6;
    }
 
    clickCount1(): void {
@@ -78,15 +88,23 @@ clickCount3(): void {
      }else{
     this.active1 = false;
      }
+    this.count3= this.count7;
     }
-
-    colorTheme = 'theme-dark-blue';
+   colorTheme = 'theme-dark-blue';
     datePickerConfig:Partial<BsDatepickerConfig>;
 
-    constructor()  {
 
-      // this.lista=tarjetas
-      // this.listaTarjetas=tarjetas
+    /////////////////////////filters////////////////
+
+   
+    constructor(public CardService:CardService)  {
+
+      this.lista=tarjetas
+      this.listaTarjetas=tarjetas
+      this.lugares = lugar
+
+      console.log(this.listaTarjetas)
+
      
       this.datePickerConfig = Object.assign({},
         {
@@ -97,27 +115,29 @@ clickCount3(): void {
           dateInputFormat: 'DD/MM/YYYY'
         });
     }
+ 
 
-    minValue: number = 100000;
-    maxValue: number = 180000;
+    minValue: number = 80000;
+    maxValue: number = 300000;
     options: Options = {
       floor: 80000,
-      ceil: 250000
+      ceil: 300000
     };
 
   ngOnInit() { 
+    CardcontacComponent;
+    this.lista=tarjetas
+    this.listaTarjetas=tarjetas
+ 
 
-    // this.listaTarjetas = this.lista.filter(t=>{t.precios >= this.minValue && t.precios <= this.maxValue  
-    //                                             })
-
-    // console.log(this.lista)
-
-
-  }
-
+}
   
+  verIdpar():void{
+    this.listaTarjetas = this.lista.filter(t=>t.precios >= this.minValue && t.precios <= this.maxValue
+                                                )
 
-
+    console.log(this.listaTarjetas)
+        }
      }
 
 

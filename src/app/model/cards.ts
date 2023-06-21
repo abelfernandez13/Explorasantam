@@ -5,5 +5,5 @@ imagen:string;
 precios:number;
 adultos:number;
 ninos:number;
-
+ruta:string;
 }

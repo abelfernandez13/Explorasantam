@@ -47,6 +47,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { CardsComponent } from '../cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,9 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     CAyapelComponent,
     AptoVillaCarmenComponent,
     SwipperAptoVillaCarmenComponent,
-    CardFilterPipe
+    CardFilterPipe,
+    CardcontacComponent,
+    CardsComponent
 
 
 
@@ -102,6 +105,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     MatIconModule,
     HttpClientModule,
     FormsModule,
+
 
     BsDatepickerModule.forRoot(),
     ],

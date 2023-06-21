@@ -7,13 +7,12 @@
 
 <div class="container-fluid" style="display:inline-block" id="sec-1">
         <!-- ts -->
-        <div class="row m-0 d-flex justify-content-center flex-wrap">
-            <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+        <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
         <div *ngFor="let t of listaTarjetas" class="col-3">
             <div class="contenedor_targeta">
                 <!-- <a href="casafaroles.html"> -->
                 <figure class="img-fluid mat-t-content" style="
-                width: 270px;
+                width: 258px;
                 height: 203px;
                 border-top-left-radius: calc(16.25px - 1px);
                 border-top-right-radius: calc(16.25px - 1px);
@@ -59,10 +58,8 @@
                 <!-- </a> -->
             </div>
         </div>
-        </div>
-        <div>
-        <button (click)="verIdpar()">verpares</button>
-        </div>
+       
+  
     <!-- Portfolio Section -->
     <div class="row">
         <h1 class="my-5">Lugares que puedes visitar</h1>
@@ -146,4 +143,4 @@
             </div>
         </div>
     </div>
-</div>
+ </div>
